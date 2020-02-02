@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\pwm;.\APP\iwdg;.\APP\wwdg;.\APP\input;.\APP\touch_key;.\APP\wkup;.\APP\adc;.\APP\adc_temp;.\APP\dac;.\APP\pwm_dac;.\APP\dma;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\ds18b20;.\APP\hwjs;.\APP\rs485;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\touch;.\APP\adxl345;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670;.\PICTURE;.\Malloc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -588,6 +588,11 @@
               <FileType>1</FileType>
               <FilePath>.\APP\spi\spi.c</FilePath>
             </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\flash\flash.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -632,6 +637,41 @@
               <FileName>cc936.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\FATFS\option\cc936.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PICTURE</GroupName>
+          <Files>
+            <File>
+              <FileName>bmp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PICTURE\bmp.c</FilePath>
+            </File>
+            <File>
+              <FileName>gif.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PICTURE\gif.c</FilePath>
+            </File>
+            <File>
+              <FileName>piclib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PICTURE\piclib.c</FilePath>
+            </File>
+            <File>
+              <FileName>tjpgd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PICTURE\tjpgd.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Malloc</GroupName>
+          <Files>
+            <File>
+              <FileName>malloc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Malloc\malloc.c</FilePath>
             </File>
           </Files>
         </Group>

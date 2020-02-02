@@ -46,3 +46,4 @@
 .\obj\main.o: .\APP\time\time.h
 .\obj\main.o: .\APP\ov7670\ov7670.h
 .\obj\main.o: .\APP\ov7670\sccb.h
+.\obj\main.o: .\PICTURE\bmp.h
