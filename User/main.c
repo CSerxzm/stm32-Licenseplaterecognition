@@ -14,6 +14,9 @@
 #include "ov7670.h"
 #include "bmp.h"
 
+#include "esp8266_drive.h"
+#include "sta_tcpclent.h"
+
 extern u8 ov_sta;	//在exit.c里面定义
 extern u8 ov_frame;	//在time.c里面定义
 
@@ -83,6 +86,11 @@ int main()
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  //中断优先级分组 分2组
 	LED_Init();
 	USART1_Init(9600);
+	
+	//esp8266初始化
+	ESP8266_Init(115200);
+	ESP8266_STA_TCPInit();
+	
 	TFTLCD_Init();			//LCD初始化
 	KEY_Init();
 	
@@ -169,7 +177,10 @@ int main()
 			}
 			delay_ms(200);
 			LCD_Clear(BLACK);
-		}else delay_ms(5);
+		}else if(key==KEY_DOWN){
+				ESP8266_STA_TCPSend("hello world!");
+				LCD_ShowString(10,10,tftlcd_data.width,tftlcd_data.height,16,"ok!");
+		}
 		
 		camera_refresh();
 		i++;

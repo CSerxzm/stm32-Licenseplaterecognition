@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670;.\PICTURE;.\Malloc</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670;.\PICTURE;.\Malloc;.\APP\esp8266\ESP8266_drive;.\APP\esp8266\ESP8266_Public;.\APP\esp8266\STA_TCPClent</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -592,6 +592,21 @@
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\APP\flash\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>sta_tcpclent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\esp8266\STA_TCPClent\sta_tcpclent.c</FilePath>
+            </File>
+            <File>
+              <FileName>esp8266_drive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\esp8266\ESP8266_drive\esp8266_drive.c</FilePath>
+            </File>
+            <File>
+              <FileName>esp8266_public.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\esp8266\ESP8266_Public\esp8266_public.c</FilePath>
             </File>
           </Files>
         </Group>
