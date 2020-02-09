@@ -18,7 +18,7 @@ u8 bmpreadbuf[BMP_DBUF_SIZE];
 u8 stdbmp_decode(const u8 *filename) 
 {
 	FIL* f_bmp;
-    u16 br;
+  u16 br;
 
     u16 count;		    	   
 	u8  rgb ,color_byte;
@@ -436,20 +436,20 @@ u8 bmp_encode(u8 *filename,u16 x,u16 y,u16 width,u16 height,u8 mode)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//文件名自增（避免覆盖）
+//组合成:形如"0:PHOTO/PIC13141.bmp"的文件名
+void camera_new_pathname(u8 *pname)
+{	 
+	u8 res;					 
+	u16 index=0;
+	while(index<0XFFFF)
+	{
+		sprintf((char*)pname,"0:PHOTO/PIC%05d.bmp",index);
+		res=f_open(ftemp,(const TCHAR*)pname,FA_READ);//尝试打开这个文件
+		if(res==FR_NO_FILE)break;		//该文件名不存在=正是我们需要的.
+		index++;
+	}
+}
 
 
 

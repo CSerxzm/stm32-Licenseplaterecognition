@@ -51,7 +51,6 @@ typedef enum{
 #define ESP8266_CH_PD_Pin_SetL     GPIO_ResetBits(ESP8266_CH_PD_Pin_Port,ESP8266_CH_PD_Pin)
 
 
-//#define ESP8266_USART(fmt, ...)	 USART_printf (USART3, fmt, ##__VA_ARGS__)
 #define ESP8266_USART(fmt, ...)	 USART_printf (USART2, fmt, ##__VA_ARGS__)
 #define PC_USART(fmt, ...)	 printf (fmt, ##__VA_ARGS__)
 

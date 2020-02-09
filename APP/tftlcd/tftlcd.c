@@ -2703,3 +2703,5 @@ void LCD_ShowPicture(u16 x, u16 y, u16 wide, u16 high,u8 *pic)
 	}
 	while(tmp < num);	
 }
+
+

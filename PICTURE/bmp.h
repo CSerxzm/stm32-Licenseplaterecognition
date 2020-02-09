@@ -77,6 +77,10 @@ u8 stdbmp_decode(const u8 *filename);
 u8 minibmp_decode(u8 *filename,u16 x,u16 y,u16 width,u16 height,u16 acolor,u8 mode);//尺寸小于240*320的bmp图片解码.
 u8 bmp_encode(u8 *filename,u16 x,u16 y,u16 width,u16 height,u8 mode);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void camera_new_pathname(u8 *pname);
+
+
 #endif
 
 

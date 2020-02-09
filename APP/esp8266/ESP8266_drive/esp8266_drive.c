@@ -3,7 +3,6 @@
 #include <stdio.h>  
 #include <string.h>  
 #include <stdbool.h>
-#include "sta_tcpclent.h"
 #include "esp8266_public.h"
 
 
@@ -37,7 +36,7 @@ void USART2_Init(u32 bound)
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			//IRQ通道使能
 	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
 
-   	//USART2 初始化设置
+  //USART2 初始化设置
 	USART_InitStructure.USART_BaudRate = bound;//串口波特率
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;//字长为8位数据格式
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;//一个停止位
@@ -329,3 +328,37 @@ u8 ESP8266_Get_LinkStatus ( void )
 	
 }
 
+
+/*
+ * 函数名：ESP8266_ReceiveString
+ * 描述  ：WF-ESP8266模块接收字符串
+ * 输入  ：enumEnUnvarnishTx，声明是否已使能了透传模式
+ * 返回  : 接收到的字符串首地址
+ * 调用  ：被外部调用
+ */
+char * ESP8266_ReceiveString ( FunctionalState enumEnUnvarnishTx )
+{
+	char * pRecStr = 0;
+	
+	ESP8266_Fram_Record_Struct .InfBit .FramLength = 0;
+	ESP8266_Fram_Record_Struct .InfBit .FramFinishFlag = 0;
+	while ( ! ESP8266_Fram_Record_Struct .InfBit .FramFinishFlag );
+	ESP8266_Fram_Record_Struct .Data_RX_BUF [ ESP8266_Fram_Record_Struct .InfBit .FramLength ] = '\0';
+	
+	if ( enumEnUnvarnishTx )
+	{
+		if ( strstr ( ESP8266_Fram_Record_Struct .Data_RX_BUF, ">" ) )
+			pRecStr = ESP8266_Fram_Record_Struct .Data_RX_BUF;
+
+	}
+	
+	else 
+	{
+		if ( strstr ( ESP8266_Fram_Record_Struct .Data_RX_BUF, "+IPD" ) )
+			pRecStr = ESP8266_Fram_Record_Struct .Data_RX_BUF;
+
+	}
+
+	return pRecStr;
+	
+}

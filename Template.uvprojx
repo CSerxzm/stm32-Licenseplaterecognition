@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670;.\PICTURE;.\Malloc;.\APP\esp8266\ESP8266_drive;.\APP\esp8266\ESP8266_Public;.\APP\esp8266\STA_TCPClent</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\can;.\APP\tftlcd;.\APP\flash;.\APP\spi;.\APP\stm32_flash;.\APP\sram;.\Malloc;.\APP\sd;.\FATFS;.\FATFS\FATFS_APP;.\FONT;.\APP\ov7670;.\PICTURE;.\Malloc;.\APP\esp8266\ESP8266_drive;.\APP\esp8266\ESP8266_Public;.\APP\esp8266\STA_TCPClent;.\Color</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -594,11 +594,6 @@
               <FilePath>.\APP\flash\flash.c</FilePath>
             </File>
             <File>
-              <FileName>sta_tcpclent.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\APP\esp8266\STA_TCPClent\sta_tcpclent.c</FilePath>
-            </File>
-            <File>
               <FileName>esp8266_drive.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\APP\esp8266\ESP8266_drive\esp8266_drive.c</FilePath>
@@ -687,6 +682,36 @@
               <FileName>malloc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Malloc\malloc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Color</GroupName>
+          <Files>
+            <File>
+              <FileName>color.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Color\color.c</FilePath>
+            </File>
+            <File>
+              <FileName>value.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Color\value.c</FilePath>
+            </File>
+            <File>
+              <FileName>discern.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Color\discern.c</FilePath>
+            </File>
+            <File>
+              <FileName>string.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Color\string.c</FilePath>
+            </File>
+            <File>
+              <FileName>algo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Color\algo.c</FilePath>
             </File>
           </Files>
         </Group>
