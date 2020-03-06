@@ -181,7 +181,7 @@ void ESP8266_ConnectToServer(void){
 		do{
 			ESP8266_Fram_Record_Struct .InfBit .FramLength = 0;               //从新开始接收新的数据包
       memset(ESP8266_Fram_Record_Struct .Data_RX_BUF,'\0',RX_BUF_MAX_LEN);
-			state=ESP8266_Send_AT_Cmd ( "AT+CIPSTART=\"TCP\",\"192.168.1.4\",8080", "OK", "ALREADY", 2500 );
+			state=ESP8266_Send_AT_Cmd ( "AT+CIPSTART=\"TCP\",\"192.168.43.137\",8080", "OK", "ALREADY", 2500 );
 		}
         while(state==false);
   }
@@ -213,16 +213,17 @@ void  PostToWeb(u8 *pname)
 			
 				ESP8266_Fram_Record_Struct .InfBit .FramLength = 0;
 				ESP8266_SendString ( ENABLE, "POST /LprSever/upload HTTP/1.1\r\n"
-																			"Host:192.168.1.4\r\n"
+																		"Host:192.168.43.137:8080\r\n"
 																		 "Content-Type:multipart/form-data;boundary=--xzm123456789\r\n"
 																				,0, Single_ID_0 );		
-				sprintf(str,"Content-Length:%d\r\n\r\n",3184+327);
+				sprintf(str,"Content-Length:%d\r\n\r\n",153666+274);
 				ESP8266_SendString ( ENABLE, str,0, Single_ID_0 );
 				ESP8266_SendString ( ENABLE, "----xzm123456789\r\n"
-																		"Content-Disposition:form-data;name=\"description\"\r\n\r\n"
-																		"\r\n----xzm123456789\r\n"
-																		"Content-Disposition:form-data;name=\"file\";filename=\"1.txt\"\r\n"
-																		"Content-Type:text/plain\r\n\r\n",0, Single_ID_0 );
+																		"Content-Disposition:form-data;name=\"file\";filename=\"PIC00001.bmp\"\r\n"
+																		"Content-Type:image/bmp\r\n\r\n",0, Single_ID_0 );
+				//无故遗失字符‘B’
+				USART2->DR='B';	
+			
 				while(1){
 							res=f_read(ftemp, databuf,sizeof(databuf), &br); 
 							for(i=0;i<br;i++)

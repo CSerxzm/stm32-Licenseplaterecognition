@@ -130,7 +130,7 @@ int main()
 		}
 		else if(key==KEY_RIGHT){
 				ESP8266_ConnectToServer();
-				PostToWeb("0:PHOTO/1.txt");
+				PostToWeb("0:PHOTO/PIC00001.bmp");
 				LCD_ShowString(10,10,tftlcd_data.width,tftlcd_data.height,16,"ok!");
 		}
 		
