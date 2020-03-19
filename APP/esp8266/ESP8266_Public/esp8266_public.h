@@ -4,7 +4,7 @@
 
 #include "system.h"
 
-#define User_ESP8266_SSID	  "HUAWEI"	      //要连接的热点的名称
+#define User_ESP8266_SSID	  "HUAWEI P30"	      //要连接的热点的名称
 #define User_ESP8266_PWD	  "xzm111789"	  //要连接的热点的密码
 
 #define User_ESP8266_TCPServer_IP	  "192.168.43.137"	  //要连接的服务器的IP  

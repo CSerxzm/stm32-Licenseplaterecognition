@@ -89,9 +89,11 @@ compiling esp8266_drive.c...
 compiling esp8266_public.c...
 APP\esp8266\ESP8266_Public\esp8266_public.c(183): warning:  #223-D: function "memset" declared implicitly
         memset(ESP8266_Fram_Record_Struct .Data_RX_BUF,'\0',RX_BUF_MAX_LEN);
+APP\esp8266\ESP8266_Public\esp8266_public.c(245): warning:  #223-D: function "strcpy" declared implicitly
+                        strcpy(lp,&ESP8266_Fram_Record_Struct.Data_RX_BUF[179]);
 APP\esp8266\ESP8266_Public\esp8266_public.c(206): warning:  #177-D: variable "fsrc" was declared but never referenced
                 FIL fsrc;
-APP\esp8266\ESP8266_Public\esp8266_public.c: 2 warnings, 0 errors
+APP\esp8266\ESP8266_Public\esp8266_public.c: 3 warnings, 0 errors
 compiling system.c...
 compiling SysTick.c...
 compiling usart.c...
@@ -130,9 +132,9 @@ Color\algo.c(624): warning:  #177-D: variable "i" was declared but never referen
         u16 a,b,u,i;
 Color\algo.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=29706 RO-data=182718 RW-data=6936 ZI-data=1095256  
+Program Size: Code=29782 RO-data=182718 RW-data=6936 ZI-data=1095256  
 FromELF: creating hex file...
-".\Obj\Template.axf" - 0 Error(s), 22 Warning(s).
+".\Obj\Template.axf" - 0 Error(s), 23 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   E:\ADesktop\毕业设计\毕业设计完成部分\stm32-Licenseplaterecognition\RTE
