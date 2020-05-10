@@ -34,4 +34,4 @@
 .\obj\fatfs_app.o: .\FATFS\integer.h
 .\obj\fatfs_app.o: .\FATFS\ffconf.h
 .\obj\fatfs_app.o: .\Malloc\malloc.h
-.\obj\fatfs_app.o: .\Color\string.h
+.\obj\fatfs_app.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

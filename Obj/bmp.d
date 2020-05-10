@@ -40,6 +40,6 @@
 .\obj\bmp.o: PICTURE\tjpgd.h
 .\obj\bmp.o: PICTURE\integer.h
 .\obj\bmp.o: PICTURE\gif.h
-.\obj\bmp.o: .\Color\string.h
+.\obj\bmp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\bmp.o: .\APP\tftlcd\tftlcd.h
 .\obj\bmp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

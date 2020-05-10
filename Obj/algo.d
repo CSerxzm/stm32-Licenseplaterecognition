@@ -41,3 +41,4 @@
 .\obj\algo.o: .\APP\time\time.h
 .\obj\algo.o: .\APP\exti\exti.h
 .\obj\algo.o: Color\value.h
+.\obj\algo.o: Color\algo.h

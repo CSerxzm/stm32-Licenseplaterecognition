@@ -22,22 +22,28 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 E:\ADesktop\毕业设计\毕业设计完成部分\stm32-Licenseplaterecognition\Template.uvprojx
-Project File Date:  02/07/2020
+Project File Date:  03/20/2020
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
 compiling main.c...
-User\main.c(39): warning:  #223-D: function "ESP8266_STA_LinkAP" declared implicitly
+User\main.c(30): warning:  #223-D: function "LCD_Display_Dir" declared implicitly
+                LCD_Display_Dir(1);
+User\main.c(57): warning:  #223-D: function "LCD_Display_Dir" declared implicitly
+                        LCD_Display_Dir(0);
+User\main.c(25): warning:  #177-D: variable "i" was declared but never referenced
+        u32 i,j;
+User\main.c(77): warning:  #223-D: function "ESP8266_STA_LinkAP" declared implicitly
         ESP8266_STA_LinkAP();
-User\main.c(132): warning:  #223-D: function "ESP8266_ConnectToServer" declared implicitly
+User\main.c(168): warning:  #223-D: function "ESP8266_ConnectToServer" declared implicitly
                                 ESP8266_ConnectToServer();
-User\main.c(133): warning:  #223-D: function "PostToWeb" declared implicitly
-                                PostToWeb("0:PHOTO/PIC00001.bmp");
-User\main.c(26): warning:  #177-D: variable "sbuf" was declared but never referenced
+User\main.c(169): warning:  #223-D: function "PostToWeb" declared implicitly
+                                PostToWeb("0:PHOTO/PIC00001.bmp",lp);
+User\main.c(63): warning:  #177-D: variable "sbuf" was declared but never referenced
         u8 sbuf[15];
-User\main.c(27): warning:  #177-D: variable "count" was declared but never referenced
+User\main.c(64): warning:  #177-D: variable "count" was declared but never referenced
         u8 count;
-User\main.c: 5 warnings, 0 errors
+User\main.c: 8 warnings, 0 errors
 compiling stm32f10x_it.c...
 assembling startup_stm32f10x_hd.s...
 compiling stm32f10x_gpio.c...
@@ -89,7 +95,7 @@ compiling esp8266_drive.c...
 compiling esp8266_public.c...
 APP\esp8266\ESP8266_Public\esp8266_public.c(183): warning:  #223-D: function "memset" declared implicitly
         memset(ESP8266_Fram_Record_Struct .Data_RX_BUF,'\0',RX_BUF_MAX_LEN);
-APP\esp8266\ESP8266_Public\esp8266_public.c(245): warning:  #223-D: function "strcpy" declared implicitly
+APP\esp8266\ESP8266_Public\esp8266_public.c(248): warning:  #223-D: function "strcpy" declared implicitly
                         strcpy(lp,&ESP8266_Fram_Record_Struct.Data_RX_BUF[179]);
 APP\esp8266\ESP8266_Public\esp8266_public.c(206): warning:  #177-D: variable "fsrc" was declared but never referenced
                 FIL fsrc;
@@ -100,11 +106,6 @@ compiling usart.c...
 compiling diskio.c...
 compiling ff.c...
 compiling fatfs_app.c...
-FATFS\FATFS_APP\fatfs_app.c(81): warning:  #223-D: function "strcpy" declared implicitly
-        strcpy((char *)tbuf,(const char*)attr);//copy
-FATFS\FATFS_APP\fatfs_app.c(88): warning:  #223-D: function "strcmp" declared implicitly
-                        if(strcmp((const char *)FILE_TYPE_TBL[i][j],(const char *)tbuf)==0)//找到了
-FATFS\FATFS_APP\fatfs_app.c: 2 warnings, 0 errors
 compiling cc936.c...
 compiling bmp.c...
 PICTURE\bmp.c(378): warning:  #223-D: function "printf" declared implicitly
@@ -116,25 +117,10 @@ compiling gif.c...
 compiling piclib.c...
 compiling tjpgd.c...
 compiling malloc.c...
-compiling color.c...
-compiling value.c...
-compiling discern.c...
-Color\discern.c(35): warning:  #223-D: function "LCD_Display_Dir" declared implicitly
-                LCD_Display_Dir(1);
-Color\discern.c(76): warning:  #223-D: function "LCD_Display_Dir" declared implicitly
-                        LCD_Display_Dir(0);
-Color\discern.c: 2 warnings, 0 errors
-compiling string.c...
-compiling algo.c...
-Color\algo.c(624): warning:  #177-D: variable "u" was declared but never referenced
-        u16 a,b,u,i;
-Color\algo.c(624): warning:  #177-D: variable "i" was declared but never referenced
-        u16 a,b,u,i;
-Color\algo.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=29782 RO-data=182718 RW-data=6936 ZI-data=1095256  
+Program Size: Code=24066 RO-data=182838 RW-data=100 ZI-data=1094524  
 FromELF: creating hex file...
-".\Obj\Template.axf" - 0 Error(s), 23 Warning(s).
+".\Obj\Template.axf" - 0 Error(s), 20 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   E:\ADesktop\毕业设计\毕业设计完成部分\stm32-Licenseplaterecognition\RTE

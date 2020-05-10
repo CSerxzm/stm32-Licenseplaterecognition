@@ -47,8 +47,5 @@
 .\obj\main.o: .\APP\ov7670\ov7670.h
 .\obj\main.o: .\APP\ov7670\sccb.h
 .\obj\main.o: .\PICTURE\bmp.h
-.\obj\main.o: .\Color\color.h
-.\obj\main.o: .\Color\value.h
-.\obj\main.o: .\Color\discern.h
 .\obj\main.o: .\APP\esp8266\ESP8266_drive\esp8266_drive.h
 .\obj\main.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

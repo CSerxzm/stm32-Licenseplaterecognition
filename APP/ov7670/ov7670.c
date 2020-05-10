@@ -58,7 +58,7 @@ u8 OV7670_Init(void)
 	for(i=0;i<sizeof(ov7670_init_reg_tbl)/sizeof(ov7670_init_reg_tbl[0]);i++)
 	{
 	   	SCCB_WR_Reg(ov7670_init_reg_tbl[i][0],ov7670_init_reg_tbl[i][1]);
-  	}
+  }
    	return 0x00; 	//ok
 } 
 ////////////////////////////////////////////////////////////////////////////

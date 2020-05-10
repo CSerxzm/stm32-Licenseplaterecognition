@@ -170,12 +170,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -682,36 +682,6 @@
               <FileName>malloc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Malloc\malloc.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Color</GroupName>
-          <Files>
-            <File>
-              <FileName>color.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Color\color.c</FilePath>
-            </File>
-            <File>
-              <FileName>value.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Color\value.c</FilePath>
-            </File>
-            <File>
-              <FileName>discern.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Color\discern.c</FilePath>
-            </File>
-            <File>
-              <FileName>string.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Color\string.c</FilePath>
-            </File>
-            <File>
-              <FileName>algo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Color\algo.c</FilePath>
             </File>
           </Files>
         </Group>

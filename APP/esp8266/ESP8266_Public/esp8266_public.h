@@ -21,7 +21,7 @@ void ESP8266_STA_LinkAP(void);
 void ESP8266_ConnectToServer(void);
 void ESP8266_STA_TCPSend(char *str);
 
-void  PostToWeb(u8 *pname);
+void PostToWeb(u8 *pname,u8 *lp);
 
 
 #endif

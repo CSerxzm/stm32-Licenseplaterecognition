@@ -197,7 +197,7 @@ void ESP8266_ConnectToServer(void){
 发送图片到服务器
 
 */
-void  PostToWeb(u8 *pname)
+void PostToWeb(u8 *pname,u8 *lp)
 {
 	
     char str[30];
@@ -206,10 +206,12 @@ void  PostToWeb(u8 *pname)
 		FIL fsrc;
 		UINT  br;
 		int res;
-		char lp[10];
+	
+		printf("xzm_point");
 	
 		res=f_open(ftemp,(const TCHAR*)pname,FA_READ|FA_OPEN_ALWAYS);//尝试打开这个文件
-	
+
+		printf("xzm_point"+res);
 		if(res==FR_OK){
 			
 				ESP8266_Fram_Record_Struct .InfBit .FramLength = 0;
@@ -240,13 +242,14 @@ void  PostToWeb(u8 *pname)
 				ESP8266_SendString ( ENABLE, "\r\n----xzm123456789--\r\n", 0, Single_ID_0);	
 		}
 		
+			printf("xzm_point2");
 			delay_ms(1000);//用于接受response
 			ESP8266_Fram_Record_Struct.Data_RX_BUF [ ESP8266_Fram_Record_Struct.InfBit .FramLength ] = '\0';
 			strcpy(lp,&ESP8266_Fram_Record_Struct.Data_RX_BUF[179]);
 			lp[9]= '\0';
-			printf("%s",lp);
 		
 		f_close(ftemp);
+		
 }
 
 

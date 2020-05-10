@@ -46,11 +46,6 @@
 ".\obj\piclib.o"
 ".\obj\tjpgd.o"
 ".\obj\malloc.o"
-".\obj\color.o"
-".\obj\value.o"
-".\obj\discern.o"
-".\obj\string.o"
-".\obj\algo.o"
 --library_type=microlib --strict --scatter ".\Obj\Template.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
